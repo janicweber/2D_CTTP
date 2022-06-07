@@ -1,0 +1,7 @@
+fitdata = load('/home/trofimov/matlab/Konrad/MC_Pencils/Antje1_Jan05/MC_fitdata.dat');
+fname = ['MC_Pencils/Antje1_Jan05/dose/' num2str(ee) '_Dose'];
+
+range = [5:5:400];
+ee = round((range/.02105)^(1./1.778)*100)/100;
+minrange=100;
+sigmaair = 4.9 + 7.3*exp(-max(range,minrange)/79);
